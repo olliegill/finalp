@@ -1,0 +1,171 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>final project</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgAuFCzr9I0uV9cLtXi0zMo69K3wW5_oY&sensor=true">
+    </script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+div.popup {
+    font-size: 14px;
+    margin: 0;
+    width: 270px;
+}
+div.popup p {
+    background-color: #FFF;
+    color: #333;
+    font-size: 12px;
+    line-height: 15px;
+}
+div.popup p a {
+    color: #1122CC;
+}
+</style>
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="header">
+      <h1>GREENVILLE FESTIVAL</h1>
+    </div>
+    <div class="shortcuts">
+      <!-- {{#link-to}} --><div>BANDS</div></a><!-- {{/link-to}} -->
+      <!-- {{#link-to}} --><div>VENUES</div></a><!-- {{/link-to}} -->
+      <!-- {{#link-to}} --><div>PROFILE</div></a><!-- {{/link-to}} -->
+      <!-- {{#link-to}} --><div>FRIENDS</div></a><!-- {{/link-to}} -->
+      <!-- {{#link-to}} --><div>SCHEDULE</div></a><!-- {{/link-to}} -->
+    </div>
+
+<!--     <script type="text/x-handlebars" data-template-name="application">
+  <div class="header">
+    <h1>FESTIVAL</h1>
+
+    {{outlet}}
+  </div>
+</script> -->
+
+<!-- ///////////////////// LOG IN ////////////////////////////////////////// -->
+
+ <script type="text/x-handlebars" data-template-name="log-and-sign-template">
+
+      <h1>LOG IN</h1>
+      <div>
+       <p>
+        <label class="btn" for="login">Log in</label>
+        <label class="btn btn-blue" for="signin">Sign up</label>
+       </p>
+      </div>
+
+      <input class="modal-state" id="login" type="checkbox" />
+      <div class="modal">
+       <label class="modal__bg" for="login"></label>
+       <div class="modal__inner">
+         <label class="modal__close" for="login"></label>
+         {{input type="text" class="login-input" placeholder="Username" value=loginUsername}}
+         {{input type="password" class="login-input" placeholder="Password" value=loginPassword}}
+         <button {{action "submitLogin"}} type="submit" class="btn">Log in</button>
+       </div>
+      </div>
+
+      <input class="modal-state" id="signin" type="checkbox" />
+      <div class="modal">
+       <label class="modal__bg" for="signin"></label>
+       <div class="modal__inner">
+        <label class="modal__close" for="signin"></label>
+        {{input type="text" class="login-input" placeholder="Username" value=signinUsername}}
+        {{input type="text" class="login-input" placeholder="Email" value=signinEmail}}
+        {{input type="password" class="login-input" placeholder="Password" value=signinPassword}}
+        <button {{action "submitSignin"}} type="submit" class="btn btn-blue">Sign in</button>
+    </div>
+      </div>
+ </script>
+
+<!--/////////////////////// HOME PAGE ////////////////////////////////////////// -->
+
+<script type="text/x-handlebars" data-template-name="home-page-template">
+  <a href=""><div class="home-links">BANDS</div></a>
+  <a href=""><div class="home-links">VENUES</div></a>
+  <a href=""><div class="home-links">PROFILE</div></a>
+  <a href=""><div class="home-links">FRIENDS</div></a>
+  <a href=""><div class="home-links">SCHEDULE</div></a>
+  <a class="twitter-timeline" href="https://twitter.com/hashtag/festival" data-widget-id="526838521437229059">#festival Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  </script>
+
+<!-- ////////////////////// PROFILE PAGE ///////////////////////////////////////-->
+
+<script type="text/x-handlebars" data-template-name="profile-template">
+
+
+</script>
+
+<!-- /////////////////////// FRIENDS PROFILE /////////////////////////////////////-->
+
+<script type="text/x-handlebars" data-template-name="friend-template">
+
+</script>
+
+<!-- ////////////////////// SCHEDULE /////////////////////////////////////////// -->
+
+  <script type="text/x-handlebars" data-template-name="schedule-template">
+      <h1>SCHEDULE</h1>
+  </script>
+
+<!-- ///////////////////////////////// MAPS //////////////////////////////////////-->
+
+<!--  <script type="text/x-handlebars" data-template-name="maps-template">
+-->
+<!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6548.027171996703!2d-82.39372949817108!3d34.855885951499985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88578f6662fa1105%3A0xd8aa9d77bf257696!2sGreenville%2C+SC%2C+USA!5e0!3m2!1sen!2suk!4v1414457525748" width="400" height="300" frameborder="0" style="border:0"></iframe>
+-->
+<div id="map_canvas" style="width:90%; height:500px"></div>
+<!--
+smileys <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.5276468145275!2d-82.405399!3d34.842966999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885830348803b05d%3A0xa01a2ba65df59043!2sSmileys+Acoustic+Cafe!5e0!3m2!1sen!2suk!4v1414459397587" width="400" height="300" frameborder="0" style="border:0"></iframe>
+ipa <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3273.479261477287!2d-82.4031496587154!3d34.86930972216543!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885831e9fc3fd85b%3A0x5b1c097b94b71dff!2sIndependent+Public+Alehouse+LLC!5e0!3m2!1sen!2suk!4v1414459471567" width="400" height="300" frameborder="0" style="border:0"></iframe>
+gottrocks<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3274.1430007868253!2d-82.358871!3d34.852634!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88582e4f76088381%3A0x541ad3bbe4ecefab!2sGottrocks!5e0!3m2!1sen!2suk!4v1414459517547" width="400" height="300" frameborder="0" style="border:0"></iframe>
+radio <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3272.7898124878748!2d-82.39049!3d34.886624000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885831ffb0f06e3f%3A0xab76a1662eee890!2sThe+Radio+Room%3A+WPBR!5e0!3m2!1sen!2suk!4v1414459561893" width="400" height="300" frameborder="0" style="border:0"></iframe>
+macs <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3274.3642821193116!2d-82.42862099999999!3d34.847073!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88583054d28bcf57%3A0xbf85a2dab96bc349!2sMac+Arnold+Plate+Full+of+Blues!5e0!3m2!1sen!2suk!4v1414459596003" width="400" height="300" frameborder="0" style="border:0"></iframe>
+-->
+ <!-- </script> -->
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/handlebars/handlebars.js"></script>
+    <script src="../bower_components/ember/ember.js"></script>
+    <script src="../bower_components/ember-data/ember-data.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="../bower_components/emberfire/dist/emberfire.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="js/application.js"></script>
+        <script src="js/controllers/application_controller.js"></script>
+      <!--   <script src="js/maplace-0.1.3.min.js"></script> -->
+        <script src="js/map.js"></script>
+
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "final-project",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "underscore": "~1.6.0",
+    "bourbon": "~4.0.2",
+    "neat": "~1.6.0",
+    "normalize-css": "~3.0.1",
+    "ember": "~1.7.1",
+    "ember-data": "~0.0.14",
+    "firebase": "~1.1.2",
+    "emberfire": "~1.2.7"
+  },
+  "resolutions": {
+    "ember": "~1.7.1"
+  }
+}
